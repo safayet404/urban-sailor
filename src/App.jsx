@@ -1,22 +1,21 @@
-import Affiliate from './components/Affiliate'
-import DressStyle from './components/DressStyle'
-import Footer from './components/Footer'
-import HomeBanner from './components/HomeBanner'
-import Navbar from './components/Navbar'
-import NewArrival from './components/NewArrival'
-import TopSelling from './components/TopSelling'
 
+import Layout from './components/Layout'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import ProductDetailsPage from './pages/ProductDetailsPage'
 function App() {
 
   return (
     <>
-     <Navbar/>
-     <HomeBanner />
-     <NewArrival/>
-     <TopSelling/>
-     <DressStyle/>
-     <Affiliate />
-     <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage/>}></Route>
+          <Route path="/product-details" element={<ProductDetailsPage/>}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+
     </>
   )
 }
