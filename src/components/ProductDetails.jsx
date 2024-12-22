@@ -159,7 +159,7 @@ const ProductDetails = () => {
                 </div>
             </div>
 
-            <div className="w-full">
+            <div className="w-full mt-5">
                 <Tabs />
             </div>
 
